@@ -10,7 +10,6 @@ function App() {
   const [data, setData] = useState([]);
   const [allOptions, setAllOptions] = useState([]);
   const [loading, setLoading] = useState(true);
-
   const [valuesSelect, setValuesSelect] = useState({});
 
   useEffect(() => {
@@ -21,7 +20,7 @@ function App() {
         const sortData = sortByTypeArr(correctData);
         setData(sortData);
         setAllOptions(correctData);
-        setValuesSelect(Object.assign({}, sortData));
+        // setValuesSelect(Object.assign({}, sortData));
       })
       .catch(() => alert("Произошла ошибка"))
       .finally(() => setLoading(false));
